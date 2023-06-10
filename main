@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int girls = 0;
+    int boys = 0;
+    for (int i = 0; i < 32; i ++){
+      int flip = (int)(Math.random() * 100 + 1);
+      if (flip > 72){
+        girls = girls + 1;
+      } else {
+        boys = boys + 1;
+      }
+    }
+    System.out.println("Girls = " + girls);
+    System.out.println("Boys = " + boys);
+    System.out.println("Would you like to go again?")
+    String choice = input.nextString();
+    if ((choice = "No")||(choice = "no")){ break;
+      
+    } else if ((choice = "Yes")||(choice = "yes")) {
+      System.out.flush();
+        System.out.print("\033[H\033[2J");
+    } else {
+      System.out.println("Something seems wrong. Try again.");
+    }
+  }
+}
